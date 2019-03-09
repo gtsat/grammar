@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:web="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0" metadata-complete="true">
+
+    <display-name>grammarkit</display-name>
+
+    <!--filter>
+        <filter-name>Set Character Encoding</filter-name>
+        <filter-class>filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF_8</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping-->
+
+    <servlet>
+        <servlet-name>diversepedia</servlet-name>
+        <jsp-file>/jsp/diversepedia/index.jsp</jsp-file>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>diversepedia</servlet-name>
+        <url-pattern>/diversepedia</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>response</servlet-name>
+        <jsp-file>/jsp/diversepedia/response.jsp</jsp-file>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>response</servlet-name>
+        <url-pattern>/response</url-pattern>
+    </servlet-mapping>
+
+    <!--init-param>
+        <param-name>listings</param-name>
+        <param-value>true</param-value>
+    </init-param-->
+
+    <servlet>
+        <servlet-name>affinity</servlet-name>
+        <jsp-file>/jsp/omcp/affinity.jsp</jsp-file>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>affinity</servlet-name>
+        <url-pattern>/affinity</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>newyork</servlet-name>
+        <jsp-file>/jsp/omcp/newyork.jsp</jsp-file>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newyork</servlet-name>
+        <url-pattern>/newyork</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>francisco</servlet-name>
+        <jsp-file>/jsp/omcp/francisco.jsp</jsp-file>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>francisco</servlet-name>
+        <url-pattern>/francisco</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>washington</servlet-name>
+        <jsp-file>/jsp/omcp/washington.jsp</jsp-file>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>washington</servlet-name>
+        <url-pattern>/washington</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>athens</servlet-name>
+        <jsp-file>/jsp/geokeyword/athens.jsp</jsp-file>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>athens</servlet-name>
+        <url-pattern>/athens</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>/jsp/diversepedia/index.jsp</welcome-file>
+        <welcome-file>/jsp/omcp/washington.jsp</welcome-file>
+        <welcome-file>/jsp/omcp/francisco.jsp</welcome-file>
+        <welcome-file>/jsp/omcp/newyork.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>5</session-timeout>
+    </session-config>
+</web-app>
